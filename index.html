@@ -2,258 +2,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1731205067857927');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1731205067857927&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#ffffff">
-<title>absolute club</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Absolute Club</title>
 
-<style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-html, body {
-  width: 100%;
-  min-height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #ffffff;
-  color: #171717;
-}
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #171717;
+    }
 
-body {
-  min-height: 100svh;
-  display: grid;
-  place-items: center;
-  padding: 14px;
-}
+    body {
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: 16px;
+    }
 
-main {
-  width: min(100%, 430px);
-  min-height: calc(100svh - 28px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: clamp(12px, 2vh, 18px);
-}
+    main {
+      width: 100%;
+      max-width: 430px;
+      min-height: calc(100svh - 32px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      text-align: center;
+    }
 
-/* ROUND LOGO */
-.logo {
-  width: clamp(110px, 24vh, 165px);
-  height: clamp(110px, 24vh, 165px);
-  border: 3px solid #e32636;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  padding: 0;
-  overflow: hidden;
-  flex-shrink: 0;
-  background: #ffffff;
-}
+    .logo {
+      width: clamp(200px, 65vw, 300px);
+      height: clamp(200px, 65vw, 300px);
+      border: 4px solid #e32636;
+      border-radius: 50%;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      background: #ffffff;
+    }
 
-.logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  border-radius: 50%;
-}
+    .logo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      border-radius: 50%;
+    }
 
-.logo-fallback {
-  font-size: 24px;
-  font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -1px;
-}
+    .logo-fallback {
+      font-size: 34px;
+      font-weight: 900;
+      line-height: 1.1;
+    }
 
-.logo-fallback span {
-  color: #e32636;
-}
+    .logo-fallback span,
+    h1 span {
+      color: #e32636;
+    }
 
-/* HEADING */
-h1 {
-  font-size: clamp(27px, 6.5vw, 35px);
-  font-weight: 800;
-  letter-spacing: -1px;
-  line-height: 1.15;
-}
+    h1 {
+      font-size: clamp(30px, 8vw, 38px);
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
 
-h1 span {
-  color: #e32636;
-}
+    .message {
+      font-size: 14px;
+      color: #777777;
+    }
+  </style>
 
-.tagline {
-  font-size: clamp(13px, 3.6vw, 15px);
-  line-height: 1.5;
-  color: #666666;
-  max-width: 350px;
-}
-
-/* BENEFITS */
-.offers {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  text-align: left;
-}
-
-.offer {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  padding: 12px;
-  border: 1px solid #eeeeee;
-  border-radius: 13px;
-  font-size: clamp(13px, 3.5vw, 15px);
-  line-height: 1.35;
-  background: #ffffff;
-}
-
-.check {
-  width: 28px;
-  height: 28px;
-  flex: 0 0 28px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: #fff0f1;
-  color: #e32636;
-  font-weight: 900;
-  font-size: 17px;
-}
-
-/* TELEGRAM BUTTON */
-.join {
-  width: 100%;
-  min-height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 13px;
-  background: #e32636;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 16px;
-  border-radius: 12px;
-  transition: background 0.2s ease;
-}
-
-.join:hover {
-  background: #c91d2d;
-}
-
-.join svg {
-  width: 21px;
-  height: 21px;
-  flex-shrink: 0;
-}
-
-.note {
-  font-size: 10px;
-  color: #888888;
-  line-height: 1.4;
-}
-
-/* SMALL MOBILE SCREENS */
-@media (max-height: 700px) {
-  main {
-    gap: 9px;
-  }
-
-  .logo {
-    width: 90px;
-    height: 90px;
-  }
-
-  .offer {
-    padding: 9px 10px;
-  }
-
-  .join {
-    min-height: 44px;
-  }
-}
-
-@media (max-width: 330px) {
-  body {
-    padding: 9px;
-  }
-
-  main {
-    gap: 10px;
-  }
-
-  .offer {
-    padding: 8px;
-  }
-
-  h1 {
-    font-size: 25px;
-  }
-}
-</style>
+  <script>
+    // Automatically redirect to Telegram.
+    // Change 1500 to 0 for an immediate redirect.
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        window.location.replace(
+          "https://t.me/+aB31sl_ncmk1MDU1"
+        );
+      }, 1500);
+    });
+  </script>
 </head>
 
 <body>
-<main>
+  <main>
+    <div class="logo">
+      <img
+        src="./6271642495984800931.jpg"
+        alt="Trader Ansh Logo"
+        onerror="
+          this.style.display='none';
+          document.getElementById('logoFallback').style.display='block';
+        "
+      >
 
-  <!-- LOGO: logo.png must be in the same folder as index.html -->
-  <div class="logo">
-    <img
-      src="./6271642495984800931.jpg"
-      alt="Trader Ansh Logo"
-      onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='block';"
-    >
-
-    <div id="logoFallback" class="logo-fallback" style="display:none;">
-      TRADER<br><span>ANSH</span>
+      <div
+        id="logoFallback"
+        class="logo-fallback"
+        style="display:none"
+      >
+        TRADER<br><span>ANSH</span>
+      </div>
     </div>
-  </div>
 
-  <!-- TITLE -->
-  <h1>Absolute <span>Club</span></h1>
-
-  <p class="tagline">
-  </p>
-
-  
-  <!-- TELEGRAM -->
-  <a
-    class="join"
-    href="https://t.me/+aB31sl_ncmk1MDU1"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <svg viewBox="0 0 24 24" fill="currentColor"
-         aria-hidden="true">
-      <path d="M22 2 2.8 9.4c-1.3.5-1.3 1.3-.2 1.6l4.9 1.5 1.9 6c.2.7.1 1 .8 1 .5 0 .8-.2 1.1-.5l2.4-2.3 5 3.7c.9.5 1.5.2 1.7-.9L23 3.3c.3-1.4-.5-1.9-1-1.3ZM8.3 12.2l10-6.3c.5-.3.9-.1.5.2l-8.3 7.6-.3 3.4-1.9-4.9Z"/>
-    </svg>
-    Join Telegram
-  </a>
-
-</main>
+    <h1>Absolute <span>Club</span></h1>
+    <p class="message">Redirecting to Telegram...</p>
+  </main>
 </body>
 </html>
