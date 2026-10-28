@@ -14,19 +14,14 @@
       padding: 0;
     }
 
-    html, body {
-      width: 100%;
-      min-height: 100%;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
-      color: #171717;
-    }
-
     body {
       min-height: 100svh;
       display: grid;
       place-items: center;
       padding: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #171717;
     }
 
     main {
@@ -37,7 +32,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 24px;
+      gap: 22px;
       text-align: center;
     }
 
@@ -56,8 +51,8 @@
     .logo img {
       width: 100%;
       height: 100%;
-      display: block;
       object-fit: contain;
+      display: block;
       border-radius: 50%;
     }
 
@@ -78,15 +73,58 @@
       letter-spacing: -1px;
     }
 
-    .message {
+    .tagline {
       font-size: 14px;
+      line-height: 1.5;
       color: #777777;
+    }
+
+    .join {
+      width: 100%;
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px;
+      border-radius: 12px;
+      background: #e32636;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      transition: background 0.2s ease;
+    }
+
+    .join:hover {
+      background: #c91d2d;
+    }
+
+    .join svg {
+      width: 23px;
+      height: 23px;
+      flex-shrink: 0;
+    }
+
+    .note {
+      font-size: 11px;
+      line-height: 1.5;
+      color: #888888;
+    }
+
+    @media (max-height: 650px) {
+      main {
+        gap: 12px;
+      }
+
+      .logo {
+        width: 150px;
+        height: 150px;
+      }
     }
   </style>
 
   <script>
-    // Automatically redirect to Telegram.
-    // Change 1500 to 0 for an immediate redirect.
     window.addEventListener("load", function () {
       setTimeout(function () {
         window.location.replace(
@@ -119,7 +157,27 @@
     </div>
 
     <h1>Absolute <span>Club</span></h1>
-    <p class="message">Redirecting to Telegram...</p>
+
+    <p class="tagline">
+      Welcome to Absolute Club
+    </p>
+
+    <a
+      class="join"
+      href="https://t.me/+aB31sl_ncmk1MDU1"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <svg viewBox="0 0 24 24" fill="currentColor"
+           aria-hidden="true">
+        <path d="M22 2 2.8 9.4c-1.3.5-1.3 1.3-.2 1.6l4.9 1.5 1.9 6c.2.7.1 1 .8 1 .5 0 .8-.2 1.1-.5l2.4-2.3 5 3.7c.9.5 1.5.2 1.7-.9L23 3.3c.3-1.4-.5-1.9-1-1.3ZM8.3 12.2l10-6.3c.5-.3.9-.1.5.2l-8.3 7.6-.3 3.4-1.9-4.9Z"/>
+      </svg>
+      Join Telegram
+    </a>
+
+    <p class="note">
+      You will be redirected to our Telegram channel automatically.
+    </p>
   </main>
 </body>
 </html>
